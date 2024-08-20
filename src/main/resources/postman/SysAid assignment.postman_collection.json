@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "cf248438-4027-49e8-a203-5d15aa5a1dfa",
+		"name": "SysAid assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22262411"
+	},
+	"item": [
+		{
+			"name": "Get tasks by username and type",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/{{username}}?type=testType1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"{{username}}"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "testType1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get wish list by username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/{{username}}/wishList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"{{username}}",
+						"wishList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark task as wish list by username and taskId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/{{username}}/wishList?taskId=taskId-1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"{{username}}",
+						"wishList"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "taskId-1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark task as completed by username and taskId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/{{username}}/completed?taskId=taskId-1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"{{username}}",
+						"completed"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "taskId-1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get completed task by username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/{{username}}/completedTasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"{{username}}",
+						"completedTasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get task of the day",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/taskOfTheDay",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"taskOfTheDay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get rated task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/ratedTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"ratedTask"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "username",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "taskId",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "type",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
