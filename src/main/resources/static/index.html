@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management API Test</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+<h1>Task Management API Test</h1>
+
+<section>
+    <h2>Get Tasks by Username and Type</h2>
+    <form onsubmit="event.preventDefault(); fetchTasks();">
+        <label for="username-get-tasks">Username:</label>
+        <input type="text" id="username-get-tasks" required>
+        <label for="type">Type:</label>
+        <input type="text" id="type" required>
+        <button type="submit">Get Tasks</button>
+    </form>
+    <pre id="get-tasks-result"></pre>
+</section>
+
+<section>
+    <h2>Mark Task as Wish List</h2>
+    <form onsubmit="event.preventDefault(); markTaskAsWishList();">
+        <label for="username-wishlist">Username:</label>
+        <input type="text" id="username-wishlist" required>
+        <label for="task-id-wishlist">Task ID:</label>
+        <input type="text" id="task-id-wishlist" required>
+        <button type="submit">Mark as Wish List</button>
+    </form>
+    <pre id="mark-wishlist-result"></pre>
+</section>
+
+<section>
+    <h2>Mark Task as Completed</h2>
+    <form onsubmit="event.preventDefault(); markTaskAsCompleted();">
+        <label for="username-completed">Username:</label>
+        <input type="text" id="username-completed" required>
+        <label for="task-id-completed">Task ID:</label>
+        <input type="text" id="task-id-completed" required>
+        <button type="submit">Mark as Completed</button>
+    </form>
+    <pre id="mark-completed-result"></pre>
+</section>
+
+<section>
+    <h2>Get Wish List</h2>
+    <form onsubmit="event.preventDefault(); fetchWishList();">
+        <label for="username-wishlist-fetch">Username:</label>
+        <input type="text" id="username-wishlist-fetch" required>
+        <button type="submit">Get Wish List</button>
+    </form>
+    <pre id="wish-list-result"></pre>
+</section>
+
+<section>
+    <h2>Get Completed Tasks</h2>
+    <form onsubmit="event.preventDefault(); fetchCompletedTasks();">
+        <label for="username-completed-fetch">Username:</label>
+        <input type="text" id="username-completed-fetch" required>
+        <button type="submit">Get Completed Tasks</button>
+    </form>
+    <pre id="completed-tasks-result"></pre>
+</section>
+
+<section>
+    <h2>Get Task of the Day</h2>
+    <form onsubmit="event.preventDefault(); fetchTaskOfTheDay();">
+        <button type="submit">Get Task of the Day</button>
+    </form>
+    <pre id="task-of-the-day-result"></pre>
+</section>
+
+<section>
+    <h2>Get Rated Task</h2>
+    <form onsubmit="event.preventDefault(); fetchRatedTask();">
+        <button type="submit">Get Rated Task</button>
+    </form>
+    <pre id="rated-task-result"></pre>
+</section>
+
+<script src="/scripts/scripts.js"></script>
+</body>
+</html>
